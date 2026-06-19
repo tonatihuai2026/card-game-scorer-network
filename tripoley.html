@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tripoley Score Calculator — Free Online Running Score Tracker</title>
+<meta name="description" content="Free online Tripoley score calculator. Track pot and kitty winnings per hand with running scores for 2-8 players. No account needed, runs in your browser.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tonatihuai2026.github.io/card-game-scorer-network/tripoley.html">
+<meta property="og:title" content="Tripoley Score Calculator — Free Online Running Score Tracker">
+<meta property="og:description" content="Free online Tripoley score calculator. Track pot and kitty winnings per hand with running scores for 2-8 players.">
+<meta name="twitter:card" content="summary">
+<meta name="google-adsense-account" content="ca-pub-8781477226668093">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8781477226668093" crossorigin="anonymous"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Tripoley Score Calculator",
+  "url": "https://tonatihuai2026.github.io/card-game-scorer-network/tripoley.html",
+  "applicationCategory": "GameApplication",
+  "operatingSystem": "Any (runs in browser)",
+  "description": "Free Tripoley score calculator. Track pot and kitty winnings per hand with running scores for 2-8 players.",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+}
+</script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <h1>Card Game Score Trackers</h1>
+  <p>Free running-score calculators for card games the big apps forgot.</p>
+</header>
+<nav>
+  <a href="index.html">All Games</a>
+  <a href="pinochle.html">Pinochle</a>
+  <a href="hollywood-gin.html">Hollywood Gin</a>
+  <a href="mexican-train.html">Mexican Train</a>
+  <a href="tripoley.html" class="active">Tripoley</a>
+</nav>
+<main>
+  <h2>Tripoley Score Tracker</h2>
+  <div class="round-controls no-print" style="margin-top:0;">
+    <label for="teamCount" style="align-self:center;">Number of players:</label>
+    <select id="teamCount"></select>
+  </div>
+  <div class="teams" id="teams"></div>
+
+  <div class="round-controls">
+    <button id="addRound">Add Hand to Running Score</button>
+    <button class="secondary" id="resetAll">Reset Game</button>
+  </div>
+
+  <h2 id="historyHeading" style="display:none;">Running Score</h2>
+  <table class="history no-print" id="historyTable" style="display:none;">
+    <thead><tr id="historyHead"></tr></thead>
+    <tbody id="historyBody"></tbody>
+  </table>
+  <div class="grand-totals" id="grandTotals"></div>
+
+  <p class="no-print" style="margin-top:2rem; font-size:.85rem; color:#777;">
+    Enter each player's net chips/points won (or lost, as a negative number) for the hand
+    — pots, kitty, and any board-square payouts combined — and add it to the running
+    score. Everything runs in your browser — nothing you type is sent anywhere.
+  </p>
+
+  <h2>How Tripoley Scoring Works</h2>
+  <div class="variant-card">
+    <strong>Three games in one board</strong><br>
+    Tripoley combines Hearts-style trick avoidance, Rummy-style melding (Michigan), and
+    Poker-style board betting in a single round. Most tables settle each component with
+    chips, then total everyone's net chips for the hand — that net number is what you
+    enter here.
+  </div>
+  <div class="variant-card">
+    <strong>The kitty / pot carryover</strong><br>
+    Money or chips bet on unclaimed board squares (e.g. nobody has the Ace of Hearts when
+    play ends) usually carries over to the next hand rather than being paid out. This
+    calculator doesn't track the carryover pot itself — just enter each player's net
+    result once a hand actually pays out.
+  </div>
+  <div class="variant-card">
+    <strong>House variants</strong><br>
+    Board layouts and payout amounts vary a lot by edition/table. Whatever your table's
+    rule, the running-score tracker only needs the final net number per player per hand.
+  </div>
+</main>
+<footer>
+  &copy; 2026 Card Game Score Trackers. Not affiliated with any publisher of Tripoley rules.
+</footer>
+<script>
+window.TRACKER_CONFIG = { gameSlug: "tripoley", minTeams: 2, maxTeams: 8, defaultTeams: 4 };
+</script>
+<script src="tracker.js"></script>
+</body>
+</html>
