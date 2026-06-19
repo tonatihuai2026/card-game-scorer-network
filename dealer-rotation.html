@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dealer Rotation Tracker — Free Online Deal-Order Helper for Card Games</title>
+<meta name="description" content="Free dealer rotation tracker for card game night. Pick a random first dealer, then tap once per hand to advance whose deal it is. No account, runs in your browser.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tonatihuai2026.github.io/card-game-scorer-network/dealer-rotation.html">
+<meta property="og:title" content="Dealer Rotation Tracker — Free Online Deal-Order Helper">
+<meta property="og:description" content="Free dealer rotation tracker for card game night. Pick a random first dealer, then tap once per hand to advance whose deal it is.">
+<meta name="twitter:card" content="summary">
+<meta name="google-site-verification" content="00EPOl2j6lxPJyEcT6muK9ndbSertQc6TBF4gq02QoQ" />
+<meta name="google-adsense-account" content="ca-pub-8781477226668093">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8781477226668093" crossorigin="anonymous"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Dealer Rotation Tracker",
+  "url": "https://tonatihuai2026.github.io/card-game-scorer-network/dealer-rotation.html",
+  "applicationCategory": "GameApplication",
+  "operatingSystem": "Any (runs in browser)",
+  "description": "Free dealer rotation tracker for card game night. Pick a random first dealer, then tap once per hand to advance whose deal it is.",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+}
+</script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <h1>Card Game Score Trackers</h1>
+  <p>Free running-score calculators for card games the big apps forgot.</p>
+</header>
+<nav>
+  <a href="index.html">All Games</a>
+  <a href="pinochle.html">Pinochle</a>
+  <a href="hollywood-gin.html">Hollywood Gin</a>
+  <a href="mexican-train.html">Mexican Train</a>
+  <a href="tripoley.html">Tripoley</a>
+  <a href="dealer-rotation.html" class="active">Dealer Rotation</a>
+</nav>
+<main>
+  <h2>Dealer Rotation Tracker</h2>
+  <div class="round-controls no-print" style="margin-top:0;">
+    <label for="playerCount" style="align-self:center;">Number of players:</label>
+    <select id="playerCount"></select>
+  </div>
+  <div class="teams" id="players"></div>
+
+  <div class="round-controls">
+    <button id="randomFirst">Pick Random First Dealer</button>
+    <button id="nextDeal">Next Hand — Advance Deal</button>
+    <button class="secondary" id="resetAll">Reset</button>
+  </div>
+
+  <p class="no-print" style="margin-top:2rem; font-size:.85rem; color:#777;">
+    Use this alongside any of the score trackers above. Pick a random first dealer once,
+    then tap "Next Hand" after each hand is dealt — the highlighted player deals next.
+    Everything runs in your browser — nothing you type is sent anywhere.
+  </p>
+
+  <h2>How Dealer Rotation Works</h2>
+  <div class="variant-card">
+    <strong>Deal passes to the left</strong><br>
+    In most card games (Pinochle, Hand and Foot, Hollywood Gin, and the games on this
+    site), the deal rotates clockwise: after each hand, the player to the current
+    dealer's left deals next. This tracker assumes that order — just arrange "Seat 1,
+    Seat 2, ..." in clockwise seating order around your table.
+  </div>
+  <div class="variant-card">
+    <strong>Picking the first dealer</strong><br>
+    Most tables pick the first dealer randomly (high card, or just by agreement) and then
+    follow the rotation from there. Use "Pick Random First Dealer" for a fair, no-argument
+    starting point.
+  </div>
+  <div class="variant-card">
+    <strong>House variants</strong><br>
+    A few games or house rules rotate counter-clockwise, or have the winner of the
+    previous hand deal next instead of a fixed rotation. If your table uses one of those,
+    just tap "Next Hand" out of seat order, or skip a seat manually — the tracker only
+    tracks whose turn it is, not the direction rule itself.
+  </div>
+</main>
+<footer>
+  &copy; 2026 Card Game Score Trackers. Not affiliated with any publisher of these games.
+</footer>
+<script>
+window.DEALER_CONFIG = { minPlayers: 2, maxPlayers: 8, defaultPlayers: 4 };
+</script>
+<script src="dealer-rotation.js"></script>
+</body>
+</html>

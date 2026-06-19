@@ -47,6 +47,8 @@ h2 { color: var(--navy-dark); border-bottom: 2px solid var(--gold); padding-bott
 
 .team { background: #fff; border: 1px solid #ddd; border-radius: 8px; padding: 1rem; }
 .team h3 { margin-top: 0; color: var(--navy); }
+.team.active-dealer { border-color: var(--gold); border-width: 2px; box-shadow: 0 0 0 2px rgba(0,0,0,.03); }
+.team.active-dealer h3 { color: var(--gold); }
 
 .team input[type="text"] {
   font-size: 1.1rem; font-weight: bold; border: none; border-bottom: 1px solid #ccc;
