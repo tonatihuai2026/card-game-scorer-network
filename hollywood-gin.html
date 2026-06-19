@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hollywood Gin Score Calculator — Free Online Running Score Tracker</title>
+<meta name="description" content="Free online Hollywood Gin score calculator. Track running points across simultaneous Gin Rummy games for 2-4 players. No account needed, runs in your browser.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tonatihuai2026.github.io/card-game-scorer-network/hollywood-gin.html">
+<meta property="og:title" content="Hollywood Gin Score Calculator — Free Online Running Score Tracker">
+<meta property="og:description" content="Free online Hollywood Gin score calculator. Track running points across simultaneous Gin Rummy games for 2-4 players.">
+<meta name="twitter:card" content="summary">
+<meta name="google-adsense-account" content="ca-pub-8781477226668093">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8781477226668093" crossorigin="anonymous"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Hollywood Gin Score Calculator",
+  "url": "https://tonatihuai2026.github.io/card-game-scorer-network/hollywood-gin.html",
+  "applicationCategory": "GameApplication",
+  "operatingSystem": "Any (runs in browser)",
+  "description": "Free Hollywood Gin score calculator. Track running points across simultaneous Gin Rummy games for 2-4 players.",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+}
+</script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <h1>Card Game Score Trackers</h1>
+  <p>Free running-score calculators for card games the big apps forgot.</p>
+</header>
+<nav>
+  <a href="index.html">All Games</a>
+  <a href="pinochle.html">Pinochle</a>
+  <a href="hollywood-gin.html" class="active">Hollywood Gin</a>
+</nav>
+<main>
+  <h2>Hollywood Gin Score Tracker</h2>
+  <div class="round-controls no-print" style="margin-top:0;">
+    <label for="teamCount" style="align-self:center;">Number of players:</label>
+    <select id="teamCount"></select>
+  </div>
+  <div class="teams" id="teams"></div>
+
+  <div class="round-controls">
+    <button id="addRound">Add Hand to Running Score</button>
+    <button class="secondary" id="resetAll">Reset Game</button>
+  </div>
+
+  <h2 id="historyHeading" style="display:none;">Running Score</h2>
+  <table class="history no-print" id="historyTable" style="display:none;">
+    <thead><tr id="historyHead"></tr></thead>
+    <tbody id="historyBody"></tbody>
+  </table>
+  <div class="grand-totals" id="grandTotals"></div>
+
+  <p class="no-print" style="margin-top:2rem; font-size:.85rem; color:#777;">
+    Enter each player's net points for the hand (winner's score minus loser's deadwood,
+    or your table's variant) and add it to the running score. Everything runs in your
+    browser — nothing you type is sent anywhere.
+  </p>
+
+  <h2>How Hollywood Gin Scoring Works</h2>
+  <div class="variant-card">
+    <strong>Multiple simultaneous games</strong><br>
+    In Hollywood Gin, each pair of players tracks several "games" at once (often 3), each
+    starting and ending at a different hand. This calculator simplifies that to one
+    running total per player — track each game's column separately on paper if you need
+    the full multi-game layout, and use this for the overall running total.
+  </div>
+  <div class="variant-card">
+    <strong>Knock vs. Gin vs. Undercut</strong><br>
+    A regular knock scores the winner's deadwood difference; a gin (no deadwood) adds a
+    25-point bonus; an undercut (defender ties or beats the knocker's deadwood) flips the
+    bonus to the defender instead. Enter whatever net point total results per hand.
+  </div>
+</main>
+<footer>
+  &copy; 2026 Card Game Score Trackers. Not affiliated with any publisher of Gin Rummy rules.
+</footer>
+<script>
+window.TRACKER_CONFIG = { gameSlug: "hollywood-gin", minTeams: 2, maxTeams: 4, defaultTeams: 2 };
+</script>
+<script src="tracker.js"></script>
+</body>
+</html>

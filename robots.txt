@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tonatihuai2026.github.io/card-game-scorer-network/sitemap.xml

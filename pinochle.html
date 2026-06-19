@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pinochle Score Calculator — Free Online Running Score Tracker</title>
+<meta name="description" content="Free online Pinochle score calculator. Track bid, meld, and trick points per hand with running totals for 2-4 teams. No account needed, runs in your browser.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tonatihuai2026.github.io/card-game-scorer-network/pinochle.html">
+<meta property="og:title" content="Pinochle Score Calculator — Free Online Running Score Tracker">
+<meta property="og:description" content="Free online Pinochle score calculator. Track bid, meld, and trick points per hand with running totals for 2-4 teams.">
+<meta name="twitter:card" content="summary">
+<meta name="google-adsense-account" content="ca-pub-8781477226668093">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8781477226668093" crossorigin="anonymous"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Pinochle Score Calculator",
+  "url": "https://tonatihuai2026.github.io/card-game-scorer-network/pinochle.html",
+  "applicationCategory": "GameApplication",
+  "operatingSystem": "Any (runs in browser)",
+  "description": "Free Pinochle score calculator. Track bid, meld, and trick points per hand with running totals for 2-4 teams.",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+}
+</script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <h1>Card Game Score Trackers</h1>
+  <p>Free running-score calculators for card games the big apps forgot.</p>
+</header>
+<nav>
+  <a href="index.html">All Games</a>
+  <a href="pinochle.html" class="active">Pinochle</a>
+  <a href="hollywood-gin.html">Hollywood Gin</a>
+</nav>
+<main>
+  <h2>Pinochle Score Tracker</h2>
+  <div class="round-controls no-print" style="margin-top:0;">
+    <label for="teamCount" style="align-self:center;">Number of teams:</label>
+    <select id="teamCount"></select>
+  </div>
+  <div class="teams" id="teams"></div>
+
+  <div class="round-controls">
+    <button id="addRound">Add Hand to Running Score</button>
+    <button class="secondary" id="resetAll">Reset Game</button>
+  </div>
+
+  <h2 id="historyHeading" style="display:none;">Running Score</h2>
+  <table class="history no-print" id="historyTable" style="display:none;">
+    <thead><tr id="historyHead"></tr></thead>
+    <tbody id="historyBody"></tbody>
+  </table>
+  <div class="grand-totals" id="grandTotals"></div>
+
+  <p class="no-print" style="margin-top:2rem; font-size:.85rem; color:#777;">
+    Enter each team's total points for the hand (bid result, melds, and tricks combined)
+    and add it to the running score. Everything runs in your browser — nothing you type
+    is sent anywhere.
+  </p>
+
+  <h2>How Pinochle Scoring Works</h2>
+  <div class="variant-card">
+    <strong>Meld</strong><br>
+    Points scored before play for card combinations (runs, marriages, aces around, etc.),
+    counted only if the bidding team makes their bid.
+  </div>
+  <div class="variant-card">
+    <strong>Tricks</strong><br>
+    Points from cards captured during play (aces=11, tens=10, kings=4, queens=3, jacks=2),
+    plus 10 for the last trick. Total trick points across all teams sum to 250 in a
+    standard deck.
+  </div>
+  <div class="variant-card">
+    <strong>Bidding</strong><br>
+    The bidding team must reach their bid total (meld + tricks) or they score zero (or
+    negative, the bid amount) for the hand — house rules vary, so this calculator just
+    takes whatever final point total you enter per team.
+  </div>
+</main>
+<footer>
+  &copy; 2026 Card Game Score Trackers. Not affiliated with any publisher of Pinochle rules.
+</footer>
+<script>
+window.TRACKER_CONFIG = { gameSlug: "pinochle", minTeams: 2, maxTeams: 4, defaultTeams: 2 };
+</script>
+<script src="tracker.js"></script>
+</body>
+</html>
