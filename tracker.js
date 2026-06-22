@@ -70,7 +70,31 @@
       var input = document.createElement("input");
       input.type = "number";
       input.id = "round-input-" + idx;
+      input.min = "-999";
+      input.max = "999";
+      input.step = "1";
+      input.setAttribute("inputmode", "numeric");
       input.value = "0";
+      // UX + validation (investor report). NOTE: card games (Pinochle, Gin, etc.) can have
+      // NEGATIVE round scores, so this tracker clamps to [-999,999] (not [0,999] like the
+      // non-negative trackers). Clear the default 0 on focus; clamp to a whole number on
+      // input so absurd values (9000) can't be entered; allow the intermediate "-"/empty
+      // states while typing a negative; write back only when the cleaned value differs.
+      input.addEventListener("focus", function (e) {
+        if (e.target.value === "0") e.target.value = "";
+        e.target.select();
+      });
+      input.addEventListener("blur", function (e) {
+        if (e.target.value.trim() === "" || e.target.value.trim() === "-") e.target.value = "0";
+      });
+      input.addEventListener("input", function (e) {
+        var raw = e.target.value;
+        if (raw === "" || raw === "-") return; // mid-typing a negative; leave it
+        var v = Math.floor(Number(raw));
+        if (!isFinite(v)) v = 0;
+        v = Math.max(-999, Math.min(999, v));
+        if (String(v) !== raw) e.target.value = String(v);
+      });
       row.appendChild(label);
       row.appendChild(input);
       div.appendChild(row);
@@ -139,7 +163,9 @@
     var round = state.teams.map(function (t, idx) {
       var input = document.getElementById("round-input-" + idx);
       var val = parseInt(input.value, 10);
-      return isNaN(val) ? 0 : val;
+      if (isNaN(val)) return 0;
+      return Math.max(-999, Math.min(999, val)); // defensive clamp at read (negatives allowed)
+
     });
     state.rounds.push(round);
     saveState();
